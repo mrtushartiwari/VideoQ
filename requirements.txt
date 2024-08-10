@@ -1,4 +1,5 @@
 gradio
+youtube-transcript-api
 langchain
 langchain-cohere
 langchain-chroma
