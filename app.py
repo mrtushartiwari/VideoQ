@@ -53,6 +53,7 @@ def bot_message(history, docs):
     
     user_question = history[-1][0]
     splits = text_splitter.split_documents(docs)
+    print(splits)
     vectorstore = Chroma.from_documents(documents=splits, embedding=CohereEmbeddings(model="embed-english-light-v3.0",
                                                                                      cohere_api_key=COHERE_API_KEY))
     retriever = vectorstore.as_retriever()
