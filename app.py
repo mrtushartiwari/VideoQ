@@ -30,6 +30,7 @@ def get_youtube_details(video_url):
     print(video_url)
     loader = YoutubeLoader.from_youtube_url(str(video_url), add_video_info=False)
     docs = loader.load()
+    print(docs)
     print("Video transcripts loaded in DB")
     return docs, loader
 
@@ -51,9 +52,10 @@ def bot_message(history, docs):
     if docs is None:
         return history
     
+    print(docs,"instide bot_message")
     user_question = history[-1][0]
     splits = text_splitter.split_documents(docs)
-    print(splits)
+    print(splits,"splits are also here")
     vectorstore = Chroma.from_documents(documents=splits, embedding=CohereEmbeddings(model="embed-english-light-v3.0",
                                                                                      cohere_api_key=COHERE_API_KEY))
     retriever = vectorstore.as_retriever()
