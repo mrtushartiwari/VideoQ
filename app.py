@@ -10,8 +10,14 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_cohere import CohereEmbeddings
+import os
+import os
 
-llm = ChatCohere(model="command-r")
+
+COHERE_API_KEY = os.environ.get("COHERE_API_KEY")
+
+
+llm = ChatCohere(model="command-r",cohere_api_key=COHERE_API_KEY)
 prompt = hub.pull("rlm/rag-prompt")
 
 text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
