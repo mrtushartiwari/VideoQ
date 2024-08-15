@@ -6,7 +6,7 @@
 
 VideoQ is an AI-powered web application that processes YouTube video content using Gradio and LangChain, enhanced by Cohere embeddings for language understanding. This app allows users to input Youtube video link and receive processed results based on advanced language models.
 
-![Project Demo](demo_capture.gif)
+![Project Demo](demo_cature.gif)
 
 ### Features
 
