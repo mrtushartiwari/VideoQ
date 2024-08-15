@@ -118,4 +118,4 @@ with gr.Blocks(theme=gr.themes.Monochrome()) as demo:
 
     clear_btn.click(lambda: None, None, chatbot_interface, queue=False)
 
-demo.launch()
+demo.launch(server_name="0.0.0.0", server_port=7860)
