@@ -8,6 +8,11 @@ VideoQ is an AI-powered web application that processes YouTube video content usi
 
 ![Project Demo](demo_cature.gif)
 
+### Live demo
+
+[Test live app here.](https://us-central1-monitor-trade-19.cloudfunctions.net/videoQ_tool)
+App goes to sleep in off time of IST working hours.
+
 ### Features
 
 - YouTube Video Processing: Automatically load and process video content. Currently support only English video whose transcripts are available.
